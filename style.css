@@ -95,9 +95,12 @@ section {
     color: var(--navy);
     background: linear-gradient(120deg, var(--mint) 0%, var(--mint) 100%);
     background-repeat: no-repeat;
-    background-size: 100% 0.4em;
-    background-position: 0 88%;
+    background-size: 100% 0.3em;
+    background-position: 0 90%;
     font-weight: 600;
+    padding: 0.1em 0.2em;
+    display: inline-block;
+    line-height: 1.4;
 }
 
 .blink {
@@ -545,22 +548,71 @@ section {
 
 .tab-btn {
     font-family: var(--font-mono);
-    font-size: 0.9rem;
-    padding: var(--space-sm) var(--space-md);
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--gray);
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    margin-right: var(--space-xs);
-    transition: var(--transition-normal);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: var(--space-md) var(--space-lg);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    color: var(--light);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    margin-right: var(--space-sm);
+    transition: all var(--transition-normal);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--mint), var(--peach));
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    z-index: -1;
 }
 
 .tab-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--mint);
+}
+
+.tab-btn:hover::before {
+    opacity: 0.1;
 }
 
 .tab-btn.active {
-    background-color: white;
+    background: linear-gradient(135deg, white, #f8f9fa);
     color: var(--navy);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--mint);
+    z-index: 10;
+}
+
+.tab-btn.active::before {
+    opacity: 0;
+}
+
+.tab-btn.active::after {
+    content: '✨';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 0.8rem;
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+    50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
 }
 
 .notebook-content {
