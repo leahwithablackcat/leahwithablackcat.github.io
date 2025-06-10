@@ -39,7 +39,7 @@
                 <p class="hero-tagline">Data-driven decisions with a human heart</p>
                 <div class="hero-links">
                     <a href="https://docs.google.com/document/d/..." target="_blank" class="btn btn-primary">My Resume</a>
-                    <a href="https://www.twitch.tv/gamebeginnergirl" target="_blank" class="btn btn-secondary">Twitch Channel</a>
+                    <button id="surpriseBtn" class="btn btn-secondary">🎲 Surprise Me!</button>
                 </div>
             </div>
             <div class="hero-image">
@@ -525,6 +525,87 @@
                     }
                 }
             });
+        });
+
+        // Surprise Me functionality
+        const surpriseBtn = document.getElementById('surpriseBtn');
+        const features = [
+            { name: 'Trip Builder', tab: 'tab1', description: 'I built this conversion tool that we iterated on time and time again!' },
+            { name: 'Tour Match', tab: 'tab2', description: 'I built this product discovery feature - my brain child from start to finish!' },
+            { name: 'Deals Filters', tab: 'tab3', description: 'I built these experimentation features to enhance the user experience!' },
+            { name: 'Pricing Page Redesign', tab: 'tab4', description: 'I built this complete pricing page overhaul with modern branding!' },
+            { name: 'GA4 Analytics Framework', tab: 'tab5', description: 'I built this entire event schema from scratch - first-ever at ZoomInfo!' },
+            { name: 'Go Ahead Tours Mobile App', section: 'app', description: 'I was a key part of the launch team for this best-in-class travel app!' },
+            { name: 'CMS Migration Initiative', section: 'cms', description: 'I\'m spearheading this WordPress to Contentful transition!' }
+        ];
+
+        surpriseBtn.addEventListener('click', () => {
+            // Create surprise modal
+            const modal = document.createElement('div');
+            modal.className = 'surprise-modal';
+            modal.innerHTML = `
+                <div class="surprise-content">
+                    <div class="surprise-header">
+                        <span class="surprise-icon">🎮</span>
+                        <h3>Rolling the dice...</h3>
+                    </div>
+                    <div class="surprise-dice">🎲</div>
+                    <div class="surprise-message">
+                        <p>Finding a cool feature to show you!</p>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            // Animate dice roll
+            const dice = modal.querySelector('.surprise-dice');
+            dice.style.animation = 'diceRoll 1.5s ease-in-out';
+
+            setTimeout(() => {
+                // Pick random feature
+                const randomFeature = features[Math.floor(Math.random() * features.length)];
+                
+                // Update modal content
+                modal.querySelector('.surprise-header h3').textContent = 'Feature Found!';
+                modal.querySelector('.surprise-dice').textContent = '✨';
+                modal.querySelector('.surprise-message').innerHTML = `
+                    <p><strong>${randomFeature.description}</strong></p>
+                    <button class="surprise-go-btn">Take me there! →</button>
+                `;
+
+                // Add click handler for "Take me there" button
+                modal.querySelector('.surprise-go-btn').addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                    
+                    if (randomFeature.tab) {
+                        // Navigate to work section and activate tab
+                        document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+                        setTimeout(() => {
+                            // Activate the specific tab
+                            tabBtns.forEach(btn => btn.classList.remove('active'));
+                            tabContents.forEach(content => content.classList.remove('active'));
+                            
+                            const targetBtn = document.querySelector(`[data-tab="${randomFeature.tab}"]`);
+                            const targetContent = document.getElementById(randomFeature.tab);
+                            
+                            if (targetBtn && targetContent) {
+                                targetBtn.classList.add('active');
+                                targetContent.classList.add('active');
+                            }
+                        }, 500);
+                    } else if (randomFeature.section) {
+                        // Navigate to specific section
+                        document.getElementById(randomFeature.section).scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+
+                // Close modal when clicking outside
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        document.body.removeChild(modal);
+                    }
+                });
+            }, 1500);
         });
     </script>
 </body>
