@@ -38,7 +38,7 @@
                 </div>
                 <p class="hero-tagline">Data-driven decisions with a human heart</p>
                 <div class="hero-links">
-                    <a href="https://docs.google.com/document/d/..." target="_blank" class="btn btn-primary">My Resume</a>
+                    <button id="resumeBtn" class="btn btn-primary">📄 My Resume</button>
                     <button id="surpriseBtn" class="btn btn-secondary">🎲 Surprise Me!</button>
                 </div>
             </div>
@@ -393,6 +393,107 @@
         </div>
     </section>
 
+    <!-- Resume Section (Collapsible) -->
+    <section id="resume" class="resume-section">
+        <div class="resume-toggle">
+            <button id="resumeToggle" class="resume-toggle-btn">
+                <span class="toggle-icon">📄</span>
+                <span class="toggle-text">View My Resume</span>
+                <span class="toggle-arrow">▼</span>
+            </button>
+        </div>
+        
+        <div id="resumeContent" class="resume-content collapsed">
+            <div class="resume-container">
+                <div class="resume-header">
+                    <h2>Leah Wilson-Duff</h2>
+                    <p class="resume-title">Senior Product Manager & Data Analyst</p>
+                    <div class="resume-contact">
+                        <span>📧 leah@leahduff.net</span>
+                        <span>🌐 leahduff.net</span>
+                    </div>
+                </div>
+                
+                <div class="resume-section-item">
+                    <h3>Professional Summary</h3>
+                    <p>People-first, empathy and thoughtfulness driven Product Manager and Product Analyst with 10+ years experience in mobile apps, web and ad tech across multiple industries. Proven track record of building data-driven products that enhance user experience and drive business growth.</p>
+                </div>
+                
+                <div class="resume-section-item">
+                    <h3>Experience</h3>
+                    <div class="job">
+                        <div class="job-header">
+                            <h4>Senior Product Manager</h4>
+                            <span class="company">ZoomInfo</span>
+                            <span class="dates">2024 - Present</span>
+                        </div>
+                        <ul>
+                            <li>Built entire GA4 event schema from scratch - first-ever microconversion tracking at ZoomInfo</li>
+                            <li>Spearheaded WordPress to Contentful CMS migration with Q1 2025 launch target</li>
+                            <li>Led complete /pricing page redesign with modern branding and G2 social proof</li>
+                            <li>Created PMM autonomy framework enabling Marketing teams to publish end-to-end</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <h4>Product Manager</h4>
+                            <span class="company">Go Ahead Tours</span>
+                            <span class="dates">2020 - 2024</span>
+                        </div>
+                        <ul>
+                            <li>Key launch team member for best-in-class B2C travel app (4.8 App Store rating)</li>
+                            <li>Built Trip Builder conversion tool with 2+ points improvement per iteration</li>
+                            <li>Created Tour Match product discovery feature - 10x increased conversions</li>
+                            <li>Led A/B testing initiatives using Optimizely for deals page optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="resume-section-item">
+                    <h3>Key Skills</h3>
+                    <div class="skills-grid-resume">
+                        <div class="skill-column">
+                            <strong>Product Management</strong>
+                            <ul>
+                                <li>User Research & Testing</li>
+                                <li>Product Strategy</li>
+                                <li>Roadmap Planning</li>
+                                <li>Stakeholder Management</li>
+                            </ul>
+                        </div>
+                        <div class="skill-column">
+                            <strong>Data & Analytics</strong>
+                            <ul>
+                                <li>A/B Testing</li>
+                                <li>Data Visualization</li>
+                                <li>Conversion Optimization</li>
+                                <li>Performance Metrics</li>
+                            </ul>
+                        </div>
+                        <div class="skill-column">
+                            <strong>Technical</strong>
+                            <ul>
+                                <li>AI/LLM Integration</li>
+                                <li>API Integration</li>
+                                <li>SQL</li>
+                                <li>Product Analytics Tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resume-section-item">
+                    <h3>Education</h3>
+                    <div class="education">
+                        <h4>[Your Degree] • [Your University]</h4>
+                        <p>[Graduation Year] • [Additional Details]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="section-header">
@@ -606,6 +707,87 @@
                     }
                 });
             }, 1500);
+        });
+
+        // Resume Button Modal functionality
+        const resumeBtn = document.getElementById('resumeBtn');
+        
+        resumeBtn.addEventListener('click', () => {
+            // Create resume modal
+            const modal = document.createElement('div');
+            modal.className = 'resume-modal';
+            modal.innerHTML = `
+                <div class="resume-modal-content">
+                    <div class="resume-modal-header">
+                        <span class="resume-modal-icon">📄</span>
+                        <h3>How would you like to view my resume?</h3>
+                    </div>
+                    <div class="resume-modal-buttons">
+                        <button class="resume-modal-btn download-btn">
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </button>
+                        <button class="resume-modal-btn view-btn">
+                            <i class="fas fa-eye"></i>
+                            View on Page
+                        </button>
+                    </div>
+                    <button class="resume-modal-close">×</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            // Add click handlers
+            modal.querySelector('.download-btn').addEventListener('click', () => {
+                // TODO: Replace with actual resume PDF URL
+                window.open('#', '_blank');
+                document.body.removeChild(modal);
+            });
+
+            modal.querySelector('.view-btn').addEventListener('click', () => {
+                document.body.removeChild(modal);
+                // Scroll to resume section and expand it
+                document.getElementById('resume').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    const resumeContent = document.getElementById('resumeContent');
+                    const resumeToggle = document.getElementById('resumeToggle');
+                    const arrow = resumeToggle.querySelector('.toggle-arrow');
+                    
+                    resumeContent.classList.remove('collapsed');
+                    arrow.textContent = '▲';
+                    resumeToggle.querySelector('.toggle-text').textContent = 'Hide My Resume';
+                }, 500);
+            });
+
+            modal.querySelector('.resume-modal-close').addEventListener('click', () => {
+                document.body.removeChild(modal);
+            });
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                }
+            });
+        });
+
+        // Resume Toggle functionality
+        const resumeToggle = document.getElementById('resumeToggle');
+        const resumeContent = document.getElementById('resumeContent');
+        
+        resumeToggle.addEventListener('click', () => {
+            const arrow = resumeToggle.querySelector('.toggle-arrow');
+            const toggleText = resumeToggle.querySelector('.toggle-text');
+            
+            if (resumeContent.classList.contains('collapsed')) {
+                resumeContent.classList.remove('collapsed');
+                arrow.textContent = '▲';
+                toggleText.textContent = 'Hide My Resume';
+            } else {
+                resumeContent.classList.add('collapsed');
+                arrow.textContent = '▼';
+                toggleText.textContent = 'View My Resume';
+            }
         });
     </script>
 </body>
