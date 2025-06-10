@@ -93,14 +93,12 @@ section {
 /* ===== UTILITY CLASSES ===== */
 .highlight {
     color: var(--navy);
-    background: linear-gradient(120deg, var(--mint) 0%, var(--mint) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.3em;
-    background-position: 0 90%;
+    background-color: rgba(158, 222, 188, 0.3);
     font-weight: 600;
-    padding: 0.1em 0.2em;
-    display: inline-block;
-    line-height: 1.4;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    white-space: nowrap;
+    display: inline;
 }
 
 .blink {
@@ -907,6 +905,105 @@ section {
 
 .stat-card .stat-label {
     font-size: 0.8rem;
+}
+
+/* ===== CMS MIGRATION SECTION ===== */
+.cms-section {
+    max-width: 1200px;
+    margin: 0 auto var(--space-xl);
+    padding: var(--space-xl) var(--space-lg);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.cms-showcase {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.migration-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    min-width: 300px;
+}
+
+.cms-card {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: var(--transition-normal);
+    min-width: 120px;
+}
+
+.cms-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.old-cms {
+    opacity: 0.7;
+}
+
+.new-cms {
+    background: linear-gradient(135deg, var(--mint), var(--blue));
+    color: white;
+}
+
+.cms-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.cms-card h3 {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.cms-card p {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.new-cms p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.migration-arrow {
+    font-size: 2rem;
+    color: var(--mint);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+.cms-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cms-note {
+    background-color: var(--lavender);
+    transform: rotate(-1deg);
+}
+
+.cms-stats {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+    flex-wrap: wrap;
 }
 
 /* ===== SKILLS SECTION ===== */
