@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leah Wilson-Duff | Product & Data</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐱</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -23,6 +24,7 @@
                 <li><a href="#work">Work</a></li>
                 <li><a href="#app">App</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -115,7 +117,7 @@
                         </div>
                         <div class="project-body">
                             <div class="project-image">
-                                <img src="https://placehold.co/600x350/ffcbc4/333333.png?text=Trip+Builder+Screenshot" alt="Trip Builder">
+                                <img src="images/projects/tripbuilder.png" alt="Trip Builder Conversion Tool">
                             </div>
                             <div class="project-description">
                                 <p>We iterated time, time and time again on this key conversion tool for us, each time me diving deep into the data and user journeys, and each time coordinating with engineers to understand how far we can push our booking API for more and more personalization.</p>
@@ -137,7 +139,7 @@
                         </div>
                         <div class="project-body">
                             <div class="project-image">
-                                <img src="https://placehold.co/600x350/c4ddff/333333.png?text=Tour+Match+Screenshot" alt="Tour Match">
+                                <img src="images/projects/tourmatch.png" alt="Tour Match Product Discovery Feature">
                             </div>
                             <div class="project-description">
                                 <p>I absolutely LOVED this feature. My brain child from start to finish, we solved the problem of trying to match users to one of more than 200 unique products, many of which were very, very similar to new customers. Plugged into multiple systems and required a full stakeholder alignment across sales, marketing, engineering and inventory.</p>
@@ -159,7 +161,7 @@
                         </div>
                         <div class="project-body">
                             <div class="project-image">
-                                <img src="https://placehold.co/600x350/d8c4ff/333333.png?text=Deals+Filters+Screenshot" alt="Deals Filters">
+                                <img src="images/projects/dealsfilters.png" alt="Deals Filters Optimization">
                             </div>
                             <div class="project-description">
                                 <p>A case of experimentation design and iteration, the features on these product discovery deals pages were underperforming like we would like. I worked to isolate variables from within the data and ran A/B and multivariate tests using Optimizely to test towards really wonderful enhancements to the user experience.</p>
@@ -175,7 +177,26 @@
                         </div>
                         <div class="project-body">
                             <div class="project-image">
-                                <img src="https://placehold.co/600x350/9edebc/333333.png?text=Pricing+Page+Screenshot" alt="Pricing Page Redesign">
+                                <div class="before-after-slider" id="pricingSlider">
+                                    <div class="slider-container">
+                                        <div class="before-image">
+                                            <img src="images/projects/pricingnew.png" alt="Pricing Page Before Redesign">
+                                            <div class="image-label before-label">Before</div>
+                                        </div>
+                                        <div class="after-image">
+                                            <img src="images/projects/pricingold.png" alt="Pricing Page After Redesign">
+                                            <div class="image-label after-label">After</div>
+                                        </div>
+                                        <div class="slider-handle" id="sliderHandle">
+                                            <div class="handle-line"></div>
+                                            <div class="handle-circle">
+                                                <i class="fas fa-arrows-alt-h"></i>
+                                            </div>
+                                            <div class="handle-line"></div>
+                                        </div>
+                                        <div class="slider-instruction">Drag to compare</div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="project-description">
                                 <p>Complete /pricing page overhaul with modern branding, G2 social proof, and animated testimonials. Redesigned to better align with SMB and enterprise-level customer needs, emphasizing transparency and self-service evaluation process.</p>
@@ -197,7 +218,7 @@
                         </div>
                         <div class="project-body">
                             <div class="project-image">
-                                <img src="https://placehold.co/600x350/ffcbc4/333333.png?text=GA4+Analytics+Dashboard" alt="GA4 Analytics Framework">
+                                <img src="images/projects/ga4data.png" alt="GA4 Analytics Framework Dashboard">
                             </div>
                             <div class="project-description">
                                 <p>Built entire GA4 event schema from scratch and created OBJECT.ACTION framework. This was entirely new to ZI—before this there was no microconversion tracking. Enabled data-driven decisions across leadership and provided comprehensive tracking of key user interactions.</p>
@@ -228,16 +249,16 @@
                     <div class="device-screen">
                         <div class="app-slider">
                             <div class="app-slide active">
-                                <img src="https://placehold.co/300x600/9edebc/333333.png?text=App+Screen+1" alt="App Screenshot 1">
+                                <img src="images/app-slider/app1.png" alt="Go Ahead Tours App - Home Screen">
                             </div>
                             <div class="app-slide">
-                                <img src="https://placehold.co/300x600/c4ddff/333333.png?text=App+Screen+2" alt="App Screenshot 2">
+                                <img src="images/app-slider/app2.png" alt="Go Ahead Tours App - Trip Details">
                             </div>
                             <div class="app-slide">
-                                <img src="https://placehold.co/300x600/ffcbc4/333333.png?text=App+Screen+3" alt="App Screenshot 3">
+                                <img src="images/app-slider/app3.png" alt="Go Ahead Tours App - Booking Flow">
                             </div>
                             <div class="app-slide">
-                                <img src="https://placehold.co/300x600/d8c4ff/333333.png?text=App+Screen+4" alt="App Screenshot 4">
+                                <img src="images/app-slider/app4.png" alt="Go Ahead Tours App - User Profile">
                             </div>
                         </div>
                         <div class="slider-controls">
@@ -393,101 +414,199 @@
         </div>
     </section>
 
-    <!-- Resume Section (Collapsible) -->
+    <!-- Resume Section (Retro Computer Interface) -->
     <section id="resume" class="resume-section">
-        <div class="resume-toggle">
-            <button id="resumeToggle" class="resume-toggle-btn">
-                <span class="toggle-icon">📄</span>
-                <span class="toggle-text">View My Resume</span>
-                <span class="toggle-arrow">▼</span>
-            </button>
+        <div class="section-header">
+            <h2>System Files</h2>
+            <div class="pixel-divider"></div>
         </div>
         
-        <div id="resumeContent" class="resume-content collapsed">
-            <div class="resume-container">
-                <div class="resume-header">
-                    <h2>Leah Wilson-Duff</h2>
-                    <p class="resume-title">Senior Product Manager & Data Analyst</p>
-                    <div class="resume-contact">
-                        <span>📧 leah@leahduff.net</span>
-                        <span>🌐 leahduff.net</span>
+        <div class="retro-computer">
+            <div class="computer-monitor">
+                <div class="monitor-frame">
+                    <div class="monitor-screen">
+                        <div class="boot-sequence" id="bootSequence">
+                            <div class="boot-line">LEAH-OS v2.5 BOOTING...</div>
+                            <div class="boot-line">Loading system files...</div>
+                            <div class="boot-line">Initializing resume.exe...</div>
+                            <div class="boot-line">Ready.</div>
+                        </div>
+                        
+                        <div class="desktop" id="desktop" style="display: none;">
+                            <div class="desktop-header">
+                                <div class="window-controls">
+                                    <span class="control-btn minimize">─</span>
+                                    <span class="control-btn maximize">□</span>
+                                    <span class="control-btn close">×</span>
+                                </div>
+                                <div class="window-title">📁 RESUME.EXE - Leah Wilson-Duff</div>
+                            </div>
+                            
+                            <div class="desktop-content">
+                                <div class="file-explorer">
+                                    <div class="file-tree">
+                                        <div class="folder-item active" data-file="summary">
+                                            <span class="folder-icon">📄</span> SUMMARY.TXT
+                                        </div>
+                                        <div class="folder-item" data-file="experience">
+                                            <span class="folder-icon">💼</span> EXPERIENCE.DAT
+                                        </div>
+                                        <div class="folder-item" data-file="skills">
+                                            <span class="folder-icon">⚡</span> SKILLS.SYS
+                                        </div>
+                                        <div class="folder-item" data-file="education">
+                                            <span class="folder-icon">🎓</span> EDUCATION.LOG
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="file-viewer">
+                                        <div class="file-content active" id="summary">
+                                            <div class="file-header">
+                                                <span class="file-path">C:\LEAH\RESUME\SUMMARY.TXT</span>
+                                                <span class="file-size">2.1KB</span>
+                                            </div>
+                                            <div class="file-text">
+                                                <div class="ascii-art">
+╔══════════════════════════════════════════════════════════════╗
+║                    LEAH WILSON-DUFF                         ║
+║              Senior Product Manager & Data Analyst          ║
+╚══════════════════════════════════════════════════════════════╝
+                                                </div>
+                                                <p class="retro-text">
+                                                    <span class="cursor-line">></span> CONTACT_INFO:<br>
+                                                    📧 leah@leahduff.net<br>
+                                                    🌐 leahduff.net<br><br>
+                                                    
+                                                    <span class="cursor-line">></span> PROFESSIONAL_SUMMARY:<br>
+                                                    People-first, empathy and thoughtfulness driven Product Manager 
+                                                    and Product Analyst with 10+ years experience in mobile apps, 
+                                                    web and ad tech across multiple industries. Proven track record 
+                                                    of building data-driven products that enhance user experience 
+                                                    and drive business growth.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="file-content" id="experience">
+                                            <div class="file-header">
+                                                <span class="file-path">C:\LEAH\RESUME\EXPERIENCE.DAT</span>
+                                                <span class="file-size">4.7KB</span>
+                                            </div>
+                                            <div class="file-text">
+                                                <div class="job-entry">
+                                                    <div class="job-title">
+                                                        <span class="cursor-line">></span> SENIOR_PRODUCT_MANAGER.exe
+                                                    </div>
+                                                    <div class="job-meta">
+                                                        Company: ZoomInfo | Duration: 2024 - Present
+                                                    </div>
+                                                    <div class="job-achievements">
+                                                        ▸ Built entire GA4 event schema from scratch - first-ever microconversion tracking at ZoomInfo<br>
+                                                        ▸ Spearheaded WordPress to Contentful CMS migration with Q1 2025 launch target<br>
+                                                        ▸ Led complete /pricing page redesign with modern branding and G2 social proof<br>
+                                                        ▸ Created PMM autonomy framework enabling Marketing teams to publish end-to-end
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="job-entry">
+                                                    <div class="job-title">
+                                                        <span class="cursor-line">></span> PRODUCT_MANAGER.exe
+                                                    </div>
+                                                    <div class="job-meta">
+                                                        Company: Go Ahead Tours | Duration: 2020 - 2024
+                                                    </div>
+                                                    <div class="job-achievements">
+                                                        ▸ Key launch team member for best-in-class B2C travel app (4.8 App Store rating)<br>
+                                                        ▸ Built Trip Builder conversion tool with 2+ points improvement per iteration<br>
+                                                        ▸ Created Tour Match product discovery feature - 10x increased conversions<br>
+                                                        ▸ Led A/B testing initiatives using Optimizely for deals page optimization
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="file-content" id="skills">
+                                            <div class="file-header">
+                                                <span class="file-path">C:\LEAH\RESUME\SKILLS.SYS</span>
+                                                <span class="file-size">3.2KB</span>
+                                            </div>
+                                            <div class="file-text">
+                                                <div class="skill-category-retro">
+                                                    <div class="category-header">
+                                                        <span class="cursor-line">></span> PRODUCT_MANAGEMENT.dll
+                                                    </div>
+                                                    <div class="skill-bars">
+                                                        <div class="skill-item">User Research & Testing <span class="skill-level">[████████████████████] 95%</span></div>
+                                                        <div class="skill-item">Product Strategy <span class="skill-level">[██████████████████  ] 90%</span></div>
+                                                        <div class="skill-item">Roadmap Planning <span class="skill-level">[██████████████████▓ ] 92%</span></div>
+                                                        <div class="skill-item">Stakeholder Management <span class="skill-level">[█████████████████▓  ] 88%</span></div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="skill-category-retro">
+                                                    <div class="category-header">
+                                                        <span class="cursor-line">></span> DATA_ANALYTICS.dll
+                                                    </div>
+                                                    <div class="skill-bars">
+                                                        <div class="skill-item">A/B Testing <span class="skill-level">[██████████████████▓ ] 92%</span></div>
+                                                        <div class="skill-item">Data Visualization <span class="skill-level">[█████████████████▓  ] 88%</span></div>
+                                                        <div class="skill-item">Conversion Optimization <span class="skill-level">[████████████████████] 94%</span></div>
+                                                        <div class="skill-item">Performance Metrics <span class="skill-level">[█████████████████   ] 86%</span></div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="skill-category-retro">
+                                                    <div class="category-header">
+                                                        <span class="cursor-line">></span> TECHNICAL_SKILLS.dll
+                                                    </div>
+                                                    <div class="skill-bars">
+                                                        <div class="skill-item">AI/LLM Integration <span class="skill-level">[█████████████████▓  ] 87%</span></div>
+                                                        <div class="skill-item">API Integration <span class="skill-level">[████████████████▓   ] 82%</span></div>
+                                                        <div class="skill-item">SQL <span class="skill-level">[███████████████▓    ] 78%</span></div>
+                                                        <div class="skill-item">Engineering Collaboration <span class="skill-level">[██████████████████▓ ] 93%</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="file-content" id="education">
+                                            <div class="file-header">
+                                                <span class="file-path">C:\LEAH\RESUME\EDUCATION.LOG</span>
+                                                <span class="file-size">1.1KB</span>
+                                            </div>
+                                            <div class="file-text">
+                                                <div class="education-entry">
+                                                    <span class="cursor-line">></span> EDUCATION_RECORDS.txt<br><br>
+                                                    [PLACEHOLDER] • [UNIVERSITY_NAME]<br>
+                                                    Graduation: [YEAR] • [ADDITIONAL_DETAILS]<br><br>
+                                                    
+                                                    <span class="cursor-line">></span> CONTINUOUS_LEARNING.log<br>
+                                                    ▸ Product Management Certifications<br>
+                                                    ▸ Data Analytics Courses<br>
+                                                    ▸ AI/ML Integration Training<br>
+                                                    ▸ Agile & Scrum Methodologies
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="desktop-footer">
+                                <div class="status-bar">
+                                    <span class="status-item">💾 RESUME.EXE</span>
+                                    <span class="status-item">🔋 POWER: 100%</span>
+                                    <span class="status-item">📡 CONNECTED</span>
+                                    <span class="status-item">⏰ 2025-06-10</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="resume-section-item">
-                    <h3>Professional Summary</h3>
-                    <p>People-first, empathy and thoughtfulness driven Product Manager and Product Analyst with 10+ years experience in mobile apps, web and ad tech across multiple industries. Proven track record of building data-driven products that enhance user experience and drive business growth.</p>
-                </div>
-                
-                <div class="resume-section-item">
-                    <h3>Experience</h3>
-                    <div class="job">
-                        <div class="job-header">
-                            <h4>Senior Product Manager</h4>
-                            <span class="company">ZoomInfo</span>
-                            <span class="dates">2024 - Present</span>
-                        </div>
-                        <ul>
-                            <li>Built entire GA4 event schema from scratch - first-ever microconversion tracking at ZoomInfo</li>
-                            <li>Spearheaded WordPress to Contentful CMS migration with Q1 2025 launch target</li>
-                            <li>Led complete /pricing page redesign with modern branding and G2 social proof</li>
-                            <li>Created PMM autonomy framework enabling Marketing teams to publish end-to-end</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-header">
-                            <h4>Product Manager</h4>
-                            <span class="company">Go Ahead Tours</span>
-                            <span class="dates">2020 - 2024</span>
-                        </div>
-                        <ul>
-                            <li>Key launch team member for best-in-class B2C travel app (4.8 App Store rating)</li>
-                            <li>Built Trip Builder conversion tool with 2+ points improvement per iteration</li>
-                            <li>Created Tour Match product discovery feature - 10x increased conversions</li>
-                            <li>Led A/B testing initiatives using Optimizely for deals page optimization</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="resume-section-item">
-                    <h3>Key Skills</h3>
-                    <div class="skills-grid-resume">
-                        <div class="skill-column">
-                            <strong>Product Management</strong>
-                            <ul>
-                                <li>User Research & Testing</li>
-                                <li>Product Strategy</li>
-                                <li>Roadmap Planning</li>
-                                <li>Stakeholder Management</li>
-                            </ul>
-                        </div>
-                        <div class="skill-column">
-                            <strong>Data & Analytics</strong>
-                            <ul>
-                                <li>A/B Testing</li>
-                                <li>Data Visualization</li>
-                                <li>Conversion Optimization</li>
-                                <li>Performance Metrics</li>
-                            </ul>
-                        </div>
-                        <div class="skill-column">
-                            <strong>Technical</strong>
-                            <ul>
-                                <li>AI/LLM Integration</li>
-                                <li>API Integration</li>
-                                <li>SQL</li>
-                                <li>Product Analytics Tools</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="resume-section-item">
-                    <h3>Education</h3>
-                    <div class="education">
-                        <h4>[Your Degree] • [Your University]</h4>
-                        <p>[Graduation Year] • [Additional Details]</p>
+                <div class="computer-base">
+                    <div class="power-button" id="powerButton">
+                        <div class="power-light"></div>
                     </div>
                 </div>
             </div>
@@ -739,8 +858,11 @@
 
             // Add click handlers
             modal.querySelector('.download-btn').addEventListener('click', () => {
-                // TODO: Replace with actual resume PDF URL
-                window.open('#', '_blank');
+                // Create a placeholder PDF download
+                const link = document.createElement('a');
+                link.href = 'data:application/pdf;base64,JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PAovVGl0bGUgKExlYWggV2lsc29uLUR1ZmYgUmVzdW1lKQovQ3JlYXRvciAoUG9ydGZvbGlvIFdlYnNpdGUpCi9Qcm9kdWNlciAoUGxhY2Vob2xkZXIgUERGKQovQ3JlYXRpb25EYXRlIChEOjIwMjUwNjEwKQo+PgplbmRvYmoKMiAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMyAwIFIKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFs0IDAgUl0KL0NvdW50IDEKPD4KZW5kb2JqCjQgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAzIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQovQ29udGVudHMgNSAwIFIKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDAKPj4Kc3RyZWFtCkJUCi9GMSAxMiBUZgo1MCA3NTAgVGQKKExlYWggV2lsc29uLUR1ZmYgUmVzdW1lKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAwOSAwMDAwMCBuIAowMDAwMDAwMTU4IDAwMDAwIG4gCjAwMDAwMDAyMDggMDAwMDAgbiAKMDAwMDAwMDI2MyAwMDAwMCBuIAowMDAwMDAwMzY0IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgNgovUm9vdCAyIDAgUgo+PgpzdGFydHhyZWYKNjE0CiUlRU9G';
+                link.download = 'Leah-Wilson-Duff-Resume.pdf';
+                link.click();
                 document.body.removeChild(modal);
             });
 
@@ -771,24 +893,169 @@
             });
         });
 
-        // Resume Toggle functionality
-        const resumeToggle = document.getElementById('resumeToggle');
-        const resumeContent = document.getElementById('resumeContent');
-        
-        resumeToggle.addEventListener('click', () => {
-            const arrow = resumeToggle.querySelector('.toggle-arrow');
-            const toggleText = resumeToggle.querySelector('.toggle-text');
+        // Retro Computer Resume functionality
+        const bootSequence = document.getElementById('bootSequence');
+        const desktop = document.getElementById('desktop');
+        const powerButton = document.getElementById('powerButton');
+        const folderItems = document.querySelectorAll('.folder-item');
+        const fileContents = document.querySelectorAll('.file-content');
+
+        // Boot sequence animation
+        function startBootSequence() {
+            bootSequence.style.display = 'flex';
+            desktop.style.display = 'none';
             
-            if (resumeContent.classList.contains('collapsed')) {
-                resumeContent.classList.remove('collapsed');
-                arrow.textContent = '▲';
-                toggleText.textContent = 'Hide My Resume';
-            } else {
-                resumeContent.classList.add('collapsed');
-                arrow.textContent = '▼';
-                toggleText.textContent = 'View My Resume';
-            }
+            setTimeout(() => {
+                bootSequence.style.display = 'none';
+                desktop.style.display = 'flex';
+            }, 4500); // Wait for all boot lines to appear
+        }
+
+        // Power button functionality
+        powerButton.addEventListener('click', () => {
+            startBootSequence();
         });
+
+        // File navigation functionality
+        folderItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all items and contents
+                folderItems.forEach(folder => folder.classList.remove('active'));
+                fileContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked item
+                item.classList.add('active');
+                
+                // Show corresponding file content
+                const fileId = item.getAttribute('data-file');
+                const targetContent = document.getElementById(fileId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Auto-start boot sequence when scrolled into view
+        const resumeSection = document.getElementById('resume');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                    setTimeout(() => {
+                        startBootSequence();
+                    }, 1000); // Delay to make it feel more natural
+                    observer.unobserve(entry.target); // Only trigger once
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(resumeSection);
+
+        // Before/After Slider functionality
+        const pricingSlider = document.getElementById('pricingSlider');
+        if (pricingSlider) {
+            const sliderHandle = document.getElementById('sliderHandle');
+            const afterImage = pricingSlider.querySelector('.after-image');
+            const instruction = pricingSlider.querySelector('.slider-instruction');
+            let isDragging = false;
+
+            function updateSlider(percentage) {
+                // Clamp percentage between 0 and 100
+                percentage = Math.max(0, Math.min(100, percentage));
+                
+                // Update the clip-path of the after image
+                afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+                
+                // Update handle position
+                sliderHandle.style.left = `${percentage}%`;
+            }
+
+            function getPercentageFromEvent(e) {
+                const rect = pricingSlider.getBoundingClientRect();
+                const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+                const x = clientX - rect.left;
+                return (x / rect.width) * 100;
+            }
+
+            // Mouse events
+            sliderHandle.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                instruction.classList.add('hidden');
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const percentage = getPercentageFromEvent(e);
+                updateSlider(percentage);
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            // Touch events for mobile
+            sliderHandle.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                instruction.classList.add('hidden');
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const percentage = getPercentageFromEvent(e);
+                updateSlider(percentage);
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            // Click anywhere on the slider to jump to that position
+            pricingSlider.addEventListener('click', (e) => {
+                if (e.target === sliderHandle || sliderHandle.contains(e.target)) return;
+                const percentage = getPercentageFromEvent(e);
+                updateSlider(percentage);
+                instruction.classList.add('hidden');
+            });
+
+            // Auto-demo animation when the pricing tab becomes active
+            const pricingTab = document.querySelector('[data-tab="tab4"]');
+            if (pricingTab) {
+                pricingTab.addEventListener('click', () => {
+                    setTimeout(() => {
+                        // Auto-animate the slider to show users it's interactive
+                        let progress = 50;
+                        const animateSlider = () => {
+                            progress += 15;
+                            if (progress > 80) progress = 20;
+                            updateSlider(progress);
+                            setTimeout(animateSlider, 1500);
+                        };
+                        
+                        // Start the demo animation after a short delay
+                        setTimeout(() => {
+                            if (!instruction.classList.contains('hidden')) {
+                                animateSlider();
+                            }
+                        }, 1000);
+                    }, 500);
+                });
+            }
+
+            // Hide instruction after first interaction
+            let hasInteracted = false;
+            const hideInstructionOnInteraction = () => {
+                if (!hasInteracted) {
+                    instruction.classList.add('hidden');
+                    hasInteracted = true;
+                }
+            };
+
+            sliderHandle.addEventListener('mousedown', hideInstructionOnInteraction);
+            sliderHandle.addEventListener('touchstart', hideInstructionOnInteraction);
+            pricingSlider.addEventListener('click', hideInstructionOnInteraction);
+        }
     </script>
 </body>
 </html>
