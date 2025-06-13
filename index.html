@@ -907,8 +907,10 @@
                 // Show corresponding file content
                 const fileId = item.getAttribute('data-file');
                 const targetContent = document.getElementById(fileId);
+                console.log('Clicked file:', fileId, 'Target element:', targetContent);
                 if (targetContent) {
                     targetContent.classList.add('active');
+                    console.log('Added active class to:', fileId);
                 }
             });
         });
